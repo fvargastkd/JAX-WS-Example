@@ -1,6 +1,11 @@
 package xiuzhu.test.jaxwsExampleClient;
 
-import org.tempuri.*;
+import java.util.Properties;
+
+import org.tempuri.HelloIndigoService;
+import org.tempuri.IHelloIndigoService;
+import org.tempuri.IService2;
+import org.tempuri.Service2;
 
 @SuppressWarnings("restriction")
 public class ClientTest {
@@ -28,6 +33,17 @@ public class ClientTest {
 	}
 	
 	public static void callHttps(){
+		
+		//set store
+		Properties systemProps = System.getProperties();  
+		systemProps.put( "javax.net.ssl.keyStore", "E:\\clientKeyStore.certs");  
+		systemProps.put( "javax.net.ssl.keyStorePassword", "cc800cc800"); 
+		systemProps.put( "javax.net.ssl.trustStore", "E:\\trustedstore.certs");  
+		systemProps.put( "javax.net.ssl.trustStorePassword", "cc800cc800");  
+		systemProps.setProperty("javax.net.debug", "ssl"); 
+
+		System.setProperties(systemProps); 
+		
 		String helloServiceUrl = "https://WIN-C088QGABQ4R:8123/RoutingSecureService/HelloIndigoRouter";
 		String service2Url = "https://WIN-C088QGABQ4R:8123/RoutingSecureService/Service2Router";
 		
@@ -49,8 +65,8 @@ public class ClientTest {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("------------test HTTP------------");
-		callHttp();
+//		System.out.println("------------test HTTP------------");
+//		callHttp();
 		System.out.println("\r\n------------test HTTPS------------");
 		callHttps();
 	}
