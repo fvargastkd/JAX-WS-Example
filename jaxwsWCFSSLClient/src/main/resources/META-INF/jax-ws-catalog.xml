@@ -1,4 +1,5 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost/wsdl/HelloIndigo.wsdl" uri="HelloIndigoService.wsdl"/>
     <system systemId="http://localhost/wsdl/TestService2.wsdl" uri="TestService2.wsdl"/>
+    <system systemId="http://localhost/wsdl/SSLService.wsdl" uri="SSLService.wsdl"/>
 </catalog>

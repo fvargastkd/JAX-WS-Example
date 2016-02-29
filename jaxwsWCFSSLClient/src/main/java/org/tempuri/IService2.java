@@ -7,6 +7,7 @@ import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
+import javax.xml.ws.BindingType;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 
@@ -18,6 +19,7 @@ import javax.xml.ws.ResponseWrapper;
  * 
  */
 @WebService(name = "IService2", targetNamespace = "http://tempuri.org/")
+@BindingType(value="http://java.sun.com/xml/ns/jaxws/2003/05/soap/bindings/HTTP/")
 @XmlSeeAlso({
     com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
     org.tempuri.ObjectFactory.class
