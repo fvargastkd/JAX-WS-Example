@@ -47,9 +47,9 @@ public class ClientTest {
 		
 		//set store
 		Properties systemProps = System.getProperties();  
-		systemProps.put( "javax.net.ssl.keyStore", "D:\\certs\\clientKeyStore.certs");  
+		systemProps.put( "javax.net.ssl.keyStore", "D:/certs/clientKeyStore.certs");  
 		systemProps.put( "javax.net.ssl.keyStorePassword", "cc800cc800"); 
-		systemProps.put( "javax.net.ssl.trustStore", "D:\\certs\\trustedstore.certs");  
+		systemProps.put( "javax.net.ssl.trustStore", "D:/certs/trustedstore.certs");  
 		systemProps.put( "javax.net.ssl.trustStorePassword", "cc800cc800");  
 		systemProps.setProperty("javax.net.debug", "ssl"); 
 		
@@ -87,7 +87,7 @@ public class ClientTest {
 		
         try {
         	KeyStore keyStore = KeyStore.getInstance("JKS");
-        	String keystoreURL = "D:\\certs\\clientKeyStore.certs";  
+        	String keystoreURL = "D:/certs/clientKeyStore.certs";  
         	InputStream is = new FileInputStream(keystoreURL);  
 			keyStore.load(is, "cc800cc800".toCharArray());
 		}  catch (KeyStoreException e) {
@@ -102,9 +102,9 @@ public class ClientTest {
 		
 		
 		
-//		systemProps.put( "javax.net.ssl.keyStore", "D:\\certs\\clientKeyStore.certs");  
+//		systemProps.put( "javax.net.ssl.keyStore", "D:/certs/clientKeyStore.certs");  
 //		systemProps.put( "javax.net.ssl.keyStorePassword", "cc800cc800"); 
-		systemProps.put( "javax.net.ssl.trustStore", "D:\\certs\\trustedstore.certs");  
+		systemProps.put( "javax.net.ssl.trustStore", "D:/certs/trustedstore.certs");  
 		systemProps.put( "javax.net.ssl.trustStorePassword", "cc800cc800");  
 		systemProps.setProperty("javax.net.debug", "ssl"); 
 		
