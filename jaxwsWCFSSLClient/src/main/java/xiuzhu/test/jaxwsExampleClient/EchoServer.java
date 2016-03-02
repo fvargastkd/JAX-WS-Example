@@ -18,8 +18,10 @@ public class EchoServer {
 
 	public static final boolean DEBUG = true;
 	public static final int HTTPS_PORT = 8282;
-	public static final String KEYSTORE_LOCATION = "E:\\keys\\CA\\ServerKeyStore.jks";
+	public static final String KEYSTORE_LOCATION = "E:/keys/CA/ServerKeyStore.jks";
 	public static final String KEYSTORE_PASSWORD = "passw0rd";
+	public static final boolean VERIFY_CLIENT = true;
+
 
 	// main program
 	public static void main(String argv[]) throws Exception {
@@ -41,6 +43,7 @@ public class EchoServer {
 		try {
 			ServerSocketFactory ssf = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 			SSLServerSocket serversocket = (SSLServerSocket) ssf.createServerSocket(HTTPS_PORT);
+			serversocket.setNeedClientAuth(VERIFY_CLIENT);
 
 			while (true) {
 				Socket client = serversocket.accept();
