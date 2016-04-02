@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="HelloIndigoResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="HelloSecureResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,36 +30,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "helloIndigoResult"
+    "helloSecureResult"
 })
-@XmlRootElement(name = "HelloIndigoResponse")
-public class HelloIndigoResponse {
+@XmlRootElement(name = "HelloSecureResponse")
+public class HelloSecureResponse {
 
-    @XmlElementRef(name = "HelloIndigoResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> helloIndigoResult;
+    @XmlElementRef(name = "HelloSecureResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> helloSecureResult;
 
     /**
-     * Gets the value of the helloIndigoResult property.
+     * Gets the value of the helloSecureResult property.
      * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<String> getHelloIndigoResult() {
-        return helloIndigoResult;
+    public JAXBElement<String> getHelloSecureResult() {
+        return helloSecureResult;
     }
 
     /**
-     * Sets the value of the helloIndigoResult property.
+     * Sets the value of the helloSecureResult property.
      * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setHelloIndigoResult(JAXBElement<String> value) {
-        this.helloIndigoResult = value;
+    public void setHelloSecureResult(JAXBElement<String> value) {
+        this.helloSecureResult = value;
     }
 
 }

@@ -24,11 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _HelloS_QNAME = new QName("http://tempuri.org/", "s");
-    private final static QName _Hello2ResponseHello2Result_QNAME = new QName("http://tempuri.org/", "Hello2Result");
-    private final static QName _HelloIndigoResponseHelloIndigoResult_QNAME = new QName("http://tempuri.org/", "HelloIndigoResult");
-    private final static QName _HelloResponseHelloResult_QNAME = new QName("http://tempuri.org/", "HelloResult");
-    private final static QName _Hello2String_QNAME = new QName("http://tempuri.org/", "string");
+    private final static QName _HelloSecureResponseHelloSecureResult_QNAME = new QName("http://tempuri.org/", "HelloSecureResult");
+    private final static QName _HelloSecureStringSecure_QNAME = new QName("http://tempuri.org/", "stringSecure");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
@@ -38,96 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link HelloIndigoResponse }
+     * Create an instance of {@link HelloSecure }
      * 
      */
-    public HelloIndigoResponse createHelloIndigoResponse() {
-        return new HelloIndigoResponse();
+    public HelloSecure createHelloSecure() {
+        return new HelloSecure();
     }
 
     /**
-     * Create an instance of {@link HelloIndigo }
+     * Create an instance of {@link HelloSecureResponse }
      * 
      */
-    public HelloIndigo createHelloIndigo() {
-        return new HelloIndigo();
-    }
-
-    /**
-     * Create an instance of {@link HelloResponse }
-     * 
-     */
-    public HelloResponse createHelloResponse() {
-        return new HelloResponse();
-    }
-
-    /**
-     * Create an instance of {@link Hello2 }
-     * 
-     */
-    public Hello2 createHello2() {
-        return new Hello2();
-    }
-
-    /**
-     * Create an instance of {@link Hello }
-     * 
-     */
-    public Hello createHello() {
-        return new Hello();
-    }
-
-    /**
-     * Create an instance of {@link Hello2Response }
-     * 
-     */
-    public Hello2Response createHello2Response() {
-        return new Hello2Response();
+    public HelloSecureResponse createHelloSecureResponse() {
+        return new HelloSecureResponse();
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "s", scope = Hello.class)
-    public JAXBElement<String> createHelloS(String value) {
-        return new JAXBElement<String>(_HelloS_QNAME, String.class, Hello.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "HelloSecureResult", scope = HelloSecureResponse.class)
+    public JAXBElement<String> createHelloSecureResponseHelloSecureResult(String value) {
+        return new JAXBElement<String>(_HelloSecureResponseHelloSecureResult_QNAME, String.class, HelloSecureResponse.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "Hello2Result", scope = Hello2Response.class)
-    public JAXBElement<String> createHello2ResponseHello2Result(String value) {
-        return new JAXBElement<String>(_Hello2ResponseHello2Result_QNAME, String.class, Hello2Response.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "HelloIndigoResult", scope = HelloIndigoResponse.class)
-    public JAXBElement<String> createHelloIndigoResponseHelloIndigoResult(String value) {
-        return new JAXBElement<String>(_HelloIndigoResponseHelloIndigoResult_QNAME, String.class, HelloIndigoResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "HelloResult", scope = HelloResponse.class)
-    public JAXBElement<String> createHelloResponseHelloResult(String value) {
-        return new JAXBElement<String>(_HelloResponseHelloResult_QNAME, String.class, HelloResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "string", scope = Hello2 .class)
-    public JAXBElement<String> createHello2String(String value) {
-        return new JAXBElement<String>(_Hello2String_QNAME, String.class, Hello2 .class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stringSecure", scope = HelloSecure.class)
+    public JAXBElement<String> createHelloSecureStringSecure(String value) {
+        return new JAXBElement<String>(_HelloSecureStringSecure_QNAME, String.class, HelloSecure.class, value);
     }
 
 }

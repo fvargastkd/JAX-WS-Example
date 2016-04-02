@@ -1,5 +1,5 @@
 
-package com.gen.ssl;
+package org.tempuri;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -16,11 +16,12 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "ISecureService", targetNamespace = "http://tempuri.org/")
+@WebService(name = "ISecureServiceBasicHttp", targetNamespace = "http://tempuri.org/")
 @XmlSeeAlso({
-    ObjectFactory.class
+    com.microsoft.schemas._2003._10.serialization.ObjectFactory.class,
+    org.tempuri.ObjectFactory.class
 })
-public interface ISecureService {
+public interface ISecureServiceBasicHttp {
 
 
     /**
@@ -29,10 +30,10 @@ public interface ISecureService {
      * @return
      *     returns java.lang.String
      */
-    @WebMethod(operationName = "HelloSecure", action = "http://tempuri.org/ISecureService/HelloSecure")
+    @WebMethod(operationName = "HelloSecure", action = "http://tempuri.org/ISecureServiceBasicHttp/HelloSecure")
     @WebResult(name = "HelloSecureResult", targetNamespace = "http://tempuri.org/")
-    @RequestWrapper(localName = "HelloSecure", targetNamespace = "http://tempuri.org/", className = "com.gen.ssl.HelloSecure")
-    @ResponseWrapper(localName = "HelloSecureResponse", targetNamespace = "http://tempuri.org/", className = "com.gen.ssl.HelloSecureResponse")
+    @RequestWrapper(localName = "HelloSecure", targetNamespace = "http://tempuri.org/", className = "org.tempuri.HelloSecure")
+    @ResponseWrapper(localName = "HelloSecureResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.HelloSecureResponse")
     public String helloSecure(
         @WebParam(name = "stringSecure", targetNamespace = "http://tempuri.org/")
         String stringSecure);
