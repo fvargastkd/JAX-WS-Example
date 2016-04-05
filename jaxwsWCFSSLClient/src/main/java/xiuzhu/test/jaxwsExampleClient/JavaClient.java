@@ -22,27 +22,27 @@ public class JavaClient {
 
 		// set store
 		Properties systemProps = System.getProperties();
-		try {
-			KeyStore keyStore = KeyStore.getInstance("JKS");
-			String keystoreURL = "C:\\Users\\xiuzhu\\Desktop\\certbasicHttp\\fuw\\clientKeyStore.certs";
-			InputStream is = new FileInputStream(keystoreURL);
-			keyStore.load(is, password.toCharArray());
-		} catch (KeyStoreException e) {
-			e.printStackTrace();
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (CertificateException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			KeyStore keyStore = KeyStore.getInstance("JKS");
+//			String keystoreURL = "C:\\Users\\xiuzhu\\Desktop\\certbasicHttp\\fuw\\clientKeyStore.certs";
+//			InputStream is = new FileInputStream(keystoreURL);
+//			keyStore.load(is, password.toCharArray());
+//		} catch (KeyStoreException e) {
+//			e.printStackTrace();
+//		} catch (NoSuchAlgorithmException e) {
+//			e.printStackTrace();
+//		} catch (CertificateException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		systemProps.put("javax.net.ssl.keyStore", "C:\\Users\\xiuzhu\\Desktop\\certbasicHttp\\fuw\\clientKeyStore.certs");
 		systemProps.put("javax.net.ssl.keyStorePassword", password);
-		systemProps.put("javax.net.ssl.trustStore", "C:\\Users\\xiuzhu\\Desktop\\certbasicHttp\\fuw\\trustedstore.certs");
+		systemProps.put("javax.net.ssl.trustStore", "C:\\Users\\xiuzhu\\Desktop\\certbasicHttp\\fuw\\trustedstore_rootCert.certs");
 		systemProps.put("javax.net.ssl.trustStorePassword", password);
 		
 		//set debug info
-		systemProps.setProperty("javax.net.debug", "ssl,keymanager ");
+		systemProps.setProperty("javax.net.debug", "ssl,keymanager");
 
 		// https://github.com/OfficeDev/ews-java-api/issues/373
 		// systemProps.put( "https.protocols", "TLSv1");
